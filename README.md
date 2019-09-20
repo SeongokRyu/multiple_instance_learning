@@ -4,7 +4,7 @@
 * (2019-09-20) Update the codes and upload results
 
 # Task description
-In our experiment, we have $N$ training bags each of which have $K$ instances. Each bag have a single image of digit '9' with the probability $p$.
+In our experiment, we have N training bags each of which have K instances. Each bag have a single image of digit '9' with the probability p.
 Our aim is to obtain a model that classifies a given bag as a positive/negative when the bag have/don't have a image of number 9. 
 
 We used multiple-instance learning algorithm, as described in "Attention-based Deep Multiple Instance Learning", https://arxiv.org/abs/1802.04712. 
