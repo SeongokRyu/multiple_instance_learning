@@ -9,8 +9,12 @@ Our aim is to obtain a model that classifies a given bag as a positive/negative 
 
 We used multiple-instance learning algorithm, as described in "Attention-based Deep Multiple Instance Learning", https://arxiv.org/abs/1802.04712. 
 We compare the mean-pooling, the attention-pooling, and the gated-attention-pooling of embeddings. 
-Experimental results are shown as below. 
+Experimental results are shown as below. The number of training bags is denoted in the x-axis and the number of training bags is 1,000.
+We found that, if a percentage of a target image in a bag is too small (in this case 2% for K=50), it is difficult to obtain a correct model. 
+Suppose that we want to apply MIL algorithm for medical imaging, where the number of meaningful patch is much smaller than the number of patches per whole slide image. 
+In such cases, in order to obtain high accuracy, it may be necessary to use sufficient number of training bags (whole slide images).
+To see an example, we refer ones to https://www.nature.com/articles/s41591-019-0508-1.
 
-![](Figures/MIL_mnist_AUROC_10.png){: width="100" height="100"}
-![](Figures/MIL_mnist_AUROC_20.png){: width="100" height="100"}
-![](Figures/MIL_mnist_AUROC_50.png){: width="100" height="100"}
+![](Figures/MIL_mnist_AUROC_10.png)
+![](Figures/MIL_mnist_AUROC_20.png)
+![](Figures/MIL_mnist_AUROC_50.png)
