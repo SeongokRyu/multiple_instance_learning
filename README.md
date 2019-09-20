@@ -11,3 +11,6 @@ We used multiple-instance learning algorithm, as described in "Attention-based D
 We compare the mean-pooling, the attention-pooling, and the gated-attention-pooling of embeddings. 
 Experimental results are shown as below. 
 
+![](Figures/MIL_mnist_AUROC_10.png)
+![](Figures/MIL_mnist_AUROC_20.png)
+![](Figures/MIL_mnist_AUROC_50.png)
