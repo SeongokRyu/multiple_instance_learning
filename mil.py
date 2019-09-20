@@ -33,14 +33,14 @@ class MIL:
                              shape=[self.attn_dim, 1],
                              initializer=tf.glorot_normal_initializer())
 
-        x = tf.expand_dims(x, axis=0) # out_dim : [1, n_imgs, f]
-        out = tf.matmul(x, w1) # out_dim : [1, n_imgs, attn_dim]
+        x = tf.expand_dims(x, axis=0)      # out_dim : [1, n_imgs, f]
+        out = tf.nn.tanh(tf.matmul(x, w1)) # out_dim : [1, n_imgs, attn_dim]
 
         if self.use_gate:
             w3 = tf.get_variable(name='attn_w3', 
                                  shape=[500, self.attn_dim],
                                  initializer=tf.glorot_normal_initializer())
-            gate = tf.matmul(x, w3)
+            gate = tf.nn.sigmoid(tf.matmul(x, w3))
             out = tf.multiply(out, gate)
 
         out = tf.matmul(out, w2) # out_dim : [1, n_imgs, 1]
