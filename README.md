@@ -4,4 +4,5 @@
 * (2019-09-20) Update the codes and upload results
 
 # Task description
-In our experiment, we have $ N $ training bags each of which have $$$K$$$ instances. For each bag, it have a 
+In our experiment, we have $N$ training bags each of which have $K$ instances. Each bag have a single image of digit '9' with the probability $p$.
+
